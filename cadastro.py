@@ -10,10 +10,10 @@ def cadastro_cliente(banco_dados):
         print ('ERRO: Todos os campos são obrigatorios.')
         return None
     cliente = {
+        'id': len(banco_dados) + 1,
         'nome': nome,
         'idade': idade,
         'telefone': telefone,
         'email': email
     }
     banco_dados.append(cliente)
-
